@@ -1,4 +1,5 @@
-import requests 
+import requests
+from tools.functions import countCards
 
 url = "http://127.0.0.1:8000"
 
@@ -11,3 +12,5 @@ if __name__ == '__main__':
 	cards = req.json()["cards"]
 	print("Les cartes tirées sont :")
 	print([card["code"] for card in cards])
+	print("\nLe compte des cartes est :")
+	print(countCards(cards))
