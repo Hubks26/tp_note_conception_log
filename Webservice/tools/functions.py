@@ -8,6 +8,8 @@ def getNewID():
 def DrawCards(deckID, nbCards):
 	if not deckID: 
 		deckID = getNewID()
+	if nbCards < 0:
+		nbCards = 0
 
 	req = requests.get("https://deckofcardsapi.com/api/deck/{}/draw/?count={}".format(deckID, nbCards))
 	return req.json()

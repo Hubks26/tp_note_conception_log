@@ -1,10 +1,10 @@
-### Partie webservice : 
+### Pour lancer le webservice : 
 Depuis la racine : <br>
 ``` $ cd Webservice ``` <br>
 ``` $ pip3 install -r requirements.txt ``` <br>
 ``` $ uvicorn main:app --reload ``` <br>
 
-### Partie client : 
+### Pour lancer le scénario client : 
 Depuis la racine : <br>
 ``` $ cd Client ``` <br>
 ``` $ pip3 install -r requirements.txt ``` <br>
