@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from tools.functions import getNewID, DrawCards
-from tools.CardSelector import CardSelector
+from tools.Deck import Deck
 
 app = FastAPI()
 
@@ -8,12 +8,13 @@ app = FastAPI()
 async def root():
 	return {"message": "Bienvenue sur le webservice !"}
 
-@app.get("/create_deck/")
-async def get_id(): 
+@app.get("/create_deck")
+async def getID(): 
 	deckID = getNewID()
 	return {"deck_id" : deckID}
 
-@app.post("/draw_cards")
-def draw(cs : CardSelector):
-	res = DrawCards(cs.nbCards, cs.DeckID)
-	return(res)
+@app.post("/draw_cards/{nbCards}")
+async def draw(nbCards: int, deck: Deck):
+	drawnCards = DrawCards(deck.deck_id, nbCards)
+	res = {"deck_id": drawnCards["deck_id"], "cards": drawnCards["cards"]}
+	return res 

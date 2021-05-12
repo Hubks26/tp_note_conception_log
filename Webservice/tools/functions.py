@@ -5,11 +5,9 @@ def getNewID():
 	json = req.json()
 	return(json["deck_id"])
 
-def DrawCards(nbCards, deckID):
-	if deckID == "" : 
+def DrawCards(deckID, nbCards):
+	if not deckID: 
 		deckID = getNewID()
 
 	req = requests.get("https://deckofcardsapi.com/api/deck/{}/draw/?count={}".format(deckID, nbCards))
-	json = req.json()
-	res = {"deck_id": json["deck_id"], "cards": json["cards"]}
-	return(res)
+	return req.json()
