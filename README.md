@@ -28,8 +28,7 @@ Si aucun deck n'a été créé au préalable, un deck est alors créé automatiq
     - ``` $ cd Webservice ```
 - puis :
     - ``` $ pip3 install -r requirements.txt ```
-Ou alors sous windows :
-    - ``` $ pip install -r requirements.txt ```
+    - Ou alors sous windows : ``` $ pip install -r requirements.txt ```
 - et enfin :
     - ``` $ uvicorn main:app --reload ```
 
@@ -43,9 +42,8 @@ On commence par consruire un nouveau deck, duquel on affiche l'identifiant. Puis
 - puis :
     - ``` $ pip3 install -r requirements.txt ```
     - ``` $ python3 main.py ```
-Ou alors sous windows :
-    - ``` $ pip install -r requirements.txt ```
-    - ``` $ python main.py ```
+    - Ou alors sous windows : ``` $ pip install -r requirements.txt ```
+    - et ``` $ python main.py ```
 
 ## Tests Unitaires
 Le projet ne comporte qu'un seul test permettant de tester la fonction de comptage des cartes.
@@ -54,11 +52,9 @@ Le projet ne comporte qu'un seul test permettant de tester la fonction de compta
     - ``` $ cd Client  ```
 - puis, si ce n'est pas déjà fait :
     - ``` $ pip3 install -r requirements.txt ```
-Ou alors sous windows :
-    - ``` $ pip install -r requirements.txt ```
+    - Ou alors sous windows : ``` $ pip install -r requirements.txt ```
 - et enfin :
     - ``` $ python3 -m unittest tests/test_client.py  ```
-Ou alors sous windows :
-    - ``` $ python -m unittest tests/test_client.py  ```
+    - Ou alors sous windows : ``` $ python -m unittest tests/test_client.py  ```
 
 Et voilà ! Merci et à bientôt pour de nouveaux projets ;) !
